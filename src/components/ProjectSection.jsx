@@ -31,7 +31,7 @@ const projects = [
     image: "/Projects/My_portfolio.png",
     tags: ["React JS", "Tailwind CSS"],
     link: "https://github.com/Shrutikarmakar1804/portfolio.git",
-    live: "https://my-portfolio-pi-mauve-10.vercel.app/"
+    live: "https://my-portfolio-46zo.vercel.app/"
   },
 
   {
