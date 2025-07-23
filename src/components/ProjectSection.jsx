@@ -30,7 +30,8 @@ const projects = [
      The website is built using React and Tailwind CSS, ensuring a responsive and modern design.`,
     image: "/Projects/My_portfolio.png",
     tags: ["React JS", "Tailwind CSS"],
-    link: "https://github.com/Shrutikarmakar1804/portfolio.git"
+    link: "https://github.com/Shrutikarmakar1804/portfolio.git",
+    live: "https://my-portfolio-pi-mauve-10.vercel.app/"
   },
 
   {
