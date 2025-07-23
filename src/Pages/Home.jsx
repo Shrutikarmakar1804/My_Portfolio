@@ -1,5 +1,4 @@
 import { Star } from "lucide-react";
-import { ThemeToggle } from "../components/ThemeToggle";
 import { StarBackground } from "../components/StarBackground";
 import { Navbar } from "../components/Navbar";
 import { HeroSection } from "../components/HeroSection";
@@ -8,6 +7,7 @@ import { SkillSection } from "../components/SkillSection";
 import { ProjectSection } from "../components/ProjectSection";
 import { ContactSection } from "../components/ContactSection";
 import { Footer } from "../components/Footer";
+import { ThemeToggle } from "../components/ThemeToggle";
 
 export const Home = () => {
     return (

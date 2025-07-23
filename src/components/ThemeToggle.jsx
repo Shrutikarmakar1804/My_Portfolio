@@ -1,10 +1,10 @@
 import { Moon, Sun } from "lucide-react";
 import { useEffect, useState } from "react";
-import { cn } from "../lib/utils";
-import { motion, AnimatePresence } from "framer-motion";
+import {cn} from "@/lib/utils";
 
 export const ThemeToggle = () => {
     const [isDarkMode, setIsDarkMode] = useState(false);
+
 
     useEffect(() => {
         const storedTheme = localStorage.getItem("theme");
@@ -12,16 +12,16 @@ export const ThemeToggle = () => {
             setIsDarkMode(true);
             document.documentElement.classList.add("dark");
         } else {
-            localStorage.setItem("theme", "light");
             setIsDarkMode(false);
+            document.documentElement.classList.remove("dark");
         }
     }, []);
 
     const toggleTheme = () => {
         if (isDarkMode) {
+            setIsDarkMode(false);
             document.documentElement.classList.remove("dark");
             localStorage.setItem("theme", "light");
-            setIsDarkMode(false);
         } else {
             document.documentElement.classList.add("dark");
             localStorage.setItem("theme", "dark");
@@ -30,36 +30,14 @@ export const ThemeToggle = () => {
     };
 
     return (
-        <button
-            onClick={toggleTheme}
-            className={cn(
-                "fixed max-sm:hidden top-5 right-5 z-50 p-2 rounded-full",
-                "transition-colors duration-300 focus:outline-none"
+        <button onClick={toggleTheme} className={cn("fixed max-sm:hidden top-5 right-5 z-50 p-2 rounded-full transition-colors duration-300",
+            "focus:outlin-hidden"
+        )}>
+            {isDarkMode ? (
+                <Sun className="h-6 w-6 text-yellow-400 dark:text-yellow-300" />
+            ) : (
+                <Moon className="h-6 w-6 text-blue-900 dark:text-blue-900" />
             )}
-        >
-            <AnimatePresence mode="wait" initial={false}>
-                {isDarkMode ? (
-                    <motion.div
-                        key="sun"
-                        initial={{ rotate: -90, opacity: 0, scale: 0.5 }}
-                        animate={{ rotate: 0, opacity: 1, scale: 1 }}
-                        exit={{ rotate: 90, opacity: 0, scale: 0.5 }}
-                        transition={{ duration: 0.4 }}
-                    >
-                        <Sun className="h-6 w-6 text-yellow-300" />
-                    </motion.div>
-                ) : (
-                    <motion.div
-                        key="moon"
-                        initial={{ rotate: 90, opacity: 0, scale: 0.5 }}
-                        animate={{ rotate: 0, opacity: 1, scale: 1 }}
-                        exit={{ rotate: -90, opacity: 0, scale: 0.5 }}
-                        transition={{ duration: 0.4 }}
-                    >
-                        <Moon className="h-6 w-6 text-blue-900" />
-                    </motion.div>
-                )}
-            </AnimatePresence>
         </button>
     );
 };
