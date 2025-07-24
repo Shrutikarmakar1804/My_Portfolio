@@ -34,7 +34,7 @@ export const AboutSection = () => {
                             </a>
 
                             <a
-                                href="/Shruti_cv_doc.pdf"
+                                href="/Projects/Shruti_cv.pdf"
                                 download
                                 rel="noopener noreferrer"
                                 className="px-6 py-3 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300"
