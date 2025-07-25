@@ -45,6 +45,17 @@ const projects = [
     link: "https://github.com/Shrutikarmakar1804/Food_Delivery_Application.git",
     live: "https://food-application-lac.vercel.app/"
   },
+  {
+    id: 5,
+    title: "Fitness Gym Application",
+    description: `This is a fitness gym application
+     that provides users with workout plans, nutrition guides, and progress tracking.
+     It features a user-friendly interface, secure user authentication, and a responsive design.`,
+    image: "/Projects/Fitness_gym.png",
+    tags: ["React JS", "Tailwind CSS"],
+    link: "https://github.com/Shrutikarmakar1804/Project_fitness_application.git",
+    live: "https://project-fitness-application.vercel.app/"
+  }
 ]
 
 
